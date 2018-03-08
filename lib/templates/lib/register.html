@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	{% load static%}
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/home.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/login.css'%}">
+
+</head>
+
+<body>
+	<div id="div1">
+		<img src="{% static 'lib/pict/lulu_logo_retina.png'%}" id="img1">
+	</div>
+
+
+	<div id="div2">
+		<a href="{% url 'home' %}" class="ah">Home</a>
+		<a href="{% url 'viewAbout' %}" class="ah">About Us</a>
+
+
+
+	</div>
+
+	<div id="log">
+		<form method="post" action="">
+
+
+			<p>Please Sign Up
+				<p>
+
+					{% csrf_token %} {{ form.as_p }}
+
+
+					<input type="submit" value="Register" class="lo1">
+					<div class="lo1">
+						<a href="{% url 'login' %}" class="inp2"> Login </a>
+					</div>
+
+		</form>
+
+
+
+
+	</div>
+
+	<div id="divtail">
+		<div id="about">
+			<span class="sp">About Us</span>
+			<br>
+			<br>
+			<a href="{% url 'viewAbout' %}" class="aha">About Us </a>
+		</div>
+
+	</div>
+	<div id="divl">
+		Lulu is an advocate for global consumer privacy rights, protection and security.
+		<br> Copyright © 2002-2017 Lulu Press, Inc. All Rights Reserved.
+	</div>
+
+
+
+</body>
+
+</html>

@@ -22,6 +22,31 @@ def login(request):
         else:
             form=LoginUser()
             return render (request,'lib/login.html',{'form':form})
+
+
+
+def register(request):
+    if request.method=='POST':
+        form = AddUserForm(request.POST)
+        if form.is_valid():
+            try:
+                user=User.objects.get(email=form.cleaned_data['email'])
+                return HttpResponse('your email exists')
+            except User.DoesNotExist:
+                user=User()
+                user.name=form.cleaned_data['name']
+                user.email=form.cleaned_data['email']
+                user.password = form.cleaned_data['password']
+                user.save()
+                return render (request,'lib/login.html')
+    else:
+        form = AddUserForm()
+        return render(request,'lib/register.html',{'form':form})
+def viewAbout(request):
+    return render(request,'lib/about.html')
+
 def logout(request):
     request.session.clear()
     return redirect('login')
+
+

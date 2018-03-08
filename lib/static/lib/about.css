@@ -1,0 +1,43 @@
+#log{
+width: 1000px;
+height: 1000px;
+border-width:3px;
+	position: relative;
+}
+
+#divimg{
+
+	width:290px;
+	height:180px;
+	border-radius:40px;
+	border:6px solid  #005580;
+	background-image: url("pict/lulu_logo_retina.png");
+	background-repeat: no-repeat;
+
+	margin-left:70px;
+	display:inline-block;
+
+
+}
+.pp{
+
+	font-family: tahoma;
+	color:  #005580;
+
+}
+#pan1{
+
+	position:absolute;
+	top:290px;
+	left:400px;
+	font-family: tahoma;
+	color:  #005580;
+	font-weight: bold;}
+
+#divabout{
+	padding: 60px;
+
+}
+img{
+	border-radius:25px;
+}

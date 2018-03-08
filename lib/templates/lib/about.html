@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	{%load static%}
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/home.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/login.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/contact.css'%}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/gallary.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/1.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/about.css'%}">
+
+</head>
+
+<body>
+
+
+	<div id="div1">
+		<img src="{% static 'lib/pict\lulu_logo_retina.png'%}" id="img1">
+
+	</div>
+
+
+	<div id="div2">
+		<a href="{% url 'home' %}" class="ah">Home</a>
+		<a href="{% url 'viewAbout' %}" class="ah">About Us</a>
+
+
+	</div>
+
+	<div id="log">
+		<h1 class="pcon abh1">About Us</h1>
+		<div id="divimg"></div>
+		<p id="pan1" class="aboutp">
+			<p style="margin-left:450px;margin-top:-10px;color:black">adel mohy</p><br/>
+			<p style="margin-left:450px;margin-top:-10px;color:black">asmaa ismail</p><br/>
+			<p style="margin-left:450px;margin-top:-10px;color:black">heba sami</p><br/>
+			<p style="margin-left:450px;margin-top:-10px;color:black">alaa hosny</p><br/>
+			<p style="margin-left:450px;margin-top:-10px;color:black">ebtisam atif</p>	<br/>
+		</p>
+		<div id="divabout">
+			<img src="{% static 'lib/pict\17.jpg'%}">
+		</div>
+
+		<p></p>
+
+
+
+	</div>
+
+	<div id="divtail">
+		<div id="about">
+			<br/>
+			<br/>
+			<br/>
+								
+			<span class="sp" style="margin-top:65px">About Us</span>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<a href="{% url 'viewAbout' %}" class="aha" style="margin-top:200px">About Us </a>
+			<br>
+		</div>
+
+		<div id="divl">
+			Lulu is an advocate for global consumer privacy rights, protection and security.
+			<br> Copyright © 2002-2017 Lulu Press, Inc. All Rights Reserved.
+		</div>
+
+
+
+</body>
+
+</html>
