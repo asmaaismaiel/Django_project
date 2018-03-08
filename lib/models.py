@@ -10,6 +10,8 @@ class Book (models.Model):
     country = models.CharField(max_length=100)
     link = models.CharField(max_length=200)
     imageUrl = models.CharField(max_length=400, default="null")
+    def __str__(self):
+        return self.title
 class Auther (models.Model):
     aid=models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
@@ -18,9 +20,12 @@ class Auther (models.Model):
     contact = models.CharField(max_length=100)
     bio = models.CharField(max_length=500)
     imageUrl = models.CharField(max_length=400, default="null")
+    def __str__(self):
+        return self.name
 class User (models.Model):
     uid=models.AutoField(primary_key=True)
     name=models.CharField(max_length=200)
     email=models.EmailField(max_length=200,unique=True)
     password=models.CharField(max_length=200)
-
+    def __str__(self):
+        return self.name
