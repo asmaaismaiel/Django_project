@@ -52,6 +52,14 @@ def home(request):
         form=LoginUser()
         return render (request,'lib/login.html',{'form':form})
 
+def viewBook(request):
+    if 'member_name' in request.session and request.session['member_name']:
+        book=Book.objects.get(bid=request.GET.get('book_id',''))
+        return render(request,'lib/book.html',{'name':request.session['member_name'],'book':book,'author':book.auther_id})
+    else:
+        form = AddUserForm()
+        return render(request,'lib/register.html',{'form':form})
+
 def viewAbout(request):
     return render(request,'lib/about.html')
 
