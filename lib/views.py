@@ -51,6 +51,14 @@ def home(request):
     else:
         form=LoginUser()
         return render (request,'lib/login.html',{'form':form})
+def viewAuthor(request):
+    if 'member_name' in request.session and request.session['member_name']:
+        author=Auther.objects.get(aid=request.GET.get('author_id',''))
+        books=Book.objects.filter(auther_id=author.aid)
+        return render(request,'lib/single.html',{'name':request.session['member_name'],'author':author,'books':books})
+    else:
+        form = AddUserForm()
+        return render(request,'lib/register.html',{'form':form})
 
 def viewBook(request):
     if 'member_name' in request.session and request.session['member_name']:
