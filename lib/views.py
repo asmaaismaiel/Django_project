@@ -42,6 +42,16 @@ def register(request):
     else:
         form = AddUserForm()
         return render(request,'lib/register.html',{'form':form})
+
+
+def home(request):
+    if 'member_name' in request.session and request.session['member_name']:
+        data=Auther.objects.all()
+        return render (request ,'lib/home.html',{'name':request.session['member_name'],'data':data})
+    else:
+        form=LoginUser()
+        return render (request,'lib/login.html',{'form':form})
+
 def viewAbout(request):
     return render(request,'lib/about.html')
 

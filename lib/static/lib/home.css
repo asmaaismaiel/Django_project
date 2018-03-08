@@ -1,0 +1,200 @@
+body{
+	background-color: #f2f2f2;
+}
+#div1{
+	width:100%;
+	
+	height:130px; 
+	position:relative;
+}
+#img1{
+      width:240px;
+      height:90px;
+	position:absolute;
+	bottom:10px;
+	left: 130px;
+}
+.g{
+
+	color: #8c8c8c;
+	text-decoration: none;
+	position:absolute;
+	bottom: 10px;
+	left:800px;
+}
+
+.g:hover{
+	text-decoration:underline;
+}
+#us{
+	width:20px;
+	height:20px;
+	position:absolute;
+	bottom: 10px;
+	left:930px;
+
+}
+
+select{
+	color:#8c8c8c; 
+position: absolute;
+bottom: 10px;
+left: 956px;
+}
+#Support{
+       left:1080px;
+}
+
+#acart{
+	left:1150px;
+}
+#imgcart{
+	position: absolute;
+	bottom:10px;
+	left: 1190px;
+}
+
+#div2{
+	width:100%;
+	background-color:#404040;
+	height:70px; 
+	position:relative;
+}
+
+.ah{
+    color:#fff;
+	padding:30px;
+	font-size:23px;
+	font-family: tahoma;
+	position: relative;
+	left:120px;
+	top: 20px;
+	text-decoration:none;
+}
+.ah:hover{
+	text-decoration-color:#ffe680;
+	color: #ffe680;
+}
+#fullimg{
+	position:relative;
+}
+#marquee{
+   height: 310px;
+   width:100%;
+   position: relative;
+
+}
+
+#div3{
+	position: relative;
+	text-align: center;
+	
+
+
+}
+
+p{
+	font-family:"Cooper Black";
+	font-size: 50px;
+	margin-bottom: 5px;
+	padding-top: 60px;
+	color: #005580;
+}
+
+
+
+.imgs{
+	
+	padding:30px;
+	margin-top:5px;
+}
+
+.imgs:hover{
+	
+	border-radius:60px;
+	width:150px;
+	height:190px;
+}
+.imgs:active{
+	opacity:0.5;
+	border: 2px solid #ffe680;
+	width:140px;
+	height:170px;
+}
+
+#divtail{
+	margin-top:150px;
+	width:100%;
+	background-color:#404040;
+	height:300px;
+	position: relative;
+
+
+}
+
+
+#divl{
+	position: relative;
+	padding-top:10px;
+	text-align: center;
+	color: #f2f2f2;
+	border-top:1px solid #f2f2f2;
+	width:100%;
+	background-color:#262626;
+	height:60px;
+
+}
+#about{
+	
+	display:inline-block;
+	text-align: justify;
+	position: absolute;
+	padding:30px;
+
+
+	left:200px;
+}
+
+#soc{
+	
+	display: inline-block;
+	position: absolute;
+	padding:30px;
+	left:500px;
+
+}
+.sp{
+
+	color:#f2f2f2;
+	font-size:29px;
+
+	position: absolute;
+	top:10px;
+	font-family: tahoma;
+}
+
+.spsoc{
+font-size:29px;
+	color:#f2f2f2;
+	font-family: tahoma;
+	position: absolute;
+	top:10px;
+
+}
+.aha{
+    color: #ffe680;
+	
+	margin-top:40px;
+	font-size:20px;
+	font-family: tahoma;
+
+	top:20px;
+	left:100px;
+	left:120px;
+	top: 20px;
+	text-decoration:none;
+
+}
+
+
+
