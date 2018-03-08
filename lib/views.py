@@ -23,8 +23,6 @@ def login(request):
             form=LoginUser()
             return render (request,'lib/login.html',{'form':form})
 
-
-
 def register(request):
     if request.method=='POST':
         form = AddUserForm(request.POST)
@@ -42,8 +40,6 @@ def register(request):
     else:
         form = AddUserForm()
         return render(request,'lib/register.html',{'form':form})
-
-
 def home(request):
     if 'member_name' in request.session and request.session['member_name']:
         data=Auther.objects.all()
@@ -51,6 +47,7 @@ def home(request):
     else:
         form=LoginUser()
         return render (request,'lib/login.html',{'form':form})
+         
 def viewAuthor(request):
     if 'member_name' in request.session and request.session['member_name']:
         author=Auther.objects.get(aid=request.GET.get('author_id',''))
@@ -59,7 +56,6 @@ def viewAuthor(request):
     else:
         form = AddUserForm()
         return render(request,'lib/register.html',{'form':form})
-
 def viewBook(request):
     if 'member_name' in request.session and request.session['member_name']:
         book=Book.objects.get(bid=request.GET.get('book_id',''))
@@ -67,12 +63,8 @@ def viewBook(request):
     else:
         form = AddUserForm()
         return render(request,'lib/register.html',{'form':form})
-
 def viewAbout(request):
     return render(request,'lib/about.html')
-
 def logout(request):
     request.session.clear()
     return redirect('login')
-
-
