@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	{%load static%}
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/home.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/login.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/contact.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/about.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/gallary.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lib/1.css'%}">
+
+
+</head>
+
+<body>
+
+	<h3 style="color:darkslateblue">welcome {{ name }}</h3>
+	<div id="div1">
+		<img src="{% static 'lib/pict/lulu_logo_retina.png'%}" id="img1">
+		<a href="{% url 'logout' %}" class="g">Logout </a>
+	</div>
+
+
+	<div id="div2">
+		<a href="{% url 'home' %}" class="ah">Home</a>
+		<a href="{% url 'viewAbout' %}" class="ah">About Us</a>
+
+
+	</div>
+
+	<div id="log">
+		<p class="pcon"> Book
+			<p>
+
+				<div id="pan1">
+					<a class="pp">{{book.title}}</a>
+				</div>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<div class="pr">Author:
+					<span class="cont">
+						<a href="{% url 'viewAuthor' %}?author_id={{author.aid}}" class="link">{{author.name}}</a>
+					</span>
+				</div>
+				<div class="pr">publish At:
+					<span class="cont"> {{book.publishedAt}}</span>
+				</div>
+				<div class="pr">country:
+					<span class="cont"> {{book.country}}</span>
+				</div>
+				<div class="pr">contact:
+					<span  class="cont">
+						<a href="{{book.link}}" class="link"> {{book.link}}</a>
+					</span>
+				</div>
+				<p class="pa">{{book.summary}}</p>
+				<div id="imgdiv">
+					<img src="/static/lib/pict/{{book.imageUrl}}" id="img6">
+				</div>
+
+
+
+	</div>
+
+	<div id="divtail">
+		<div id="about">
+			<span class="sp">About Us</span>
+			<br>
+			<br>
+			<a href="{% url 'viewAbout' %}" class="aha">About Us </a>
+			<br>
+		</div>
+
+	</div>
+	<div id="divl">
+		Lulu is an advocate for global consumer privacy rights, protection and security.
+		<br> Copyright © 2002-2017 Lulu Press, Inc. All Rights Reserved.
+	</div>
+
+
+
+</body>
+
+</html>

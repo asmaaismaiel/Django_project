@@ -1,0 +1,23 @@
+table{
+margin: auto;
+border-right: 1px solid grey;
+border-left: 1px solid grey;
+border-radius: 27px;
+
+}
+.fi{
+	border-left:1px solid grey;
+
+}
+.anl{
+
+	font-family: tahoma;
+	color: #000055;
+
+}
+.by{
+	color: green;
+}
+.pr{
+	color: red;
+}
